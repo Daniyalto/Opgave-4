@@ -8,8 +8,6 @@ clientSocket.connect((serverName, serverPort))
 
 while True:
     command = input("Enter command: ")  # Get user input
-  
-
     clientSocket.sendall((command + "\n").encode())  # Send command to server
     result = clientSocket.recv(1024).decode()  # Receive server response
     print("Server response:", result) # Print server response
