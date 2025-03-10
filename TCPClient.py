@@ -11,8 +11,6 @@ while True:
   
 
     clientSocket.sendall((command + "\n").encode())  # Send command to server
-    if command == "close":  # Close connection if user enters "close"
-        break
     result = clientSocket.recv(1024).decode()  # Receive server response
     print("Server response:", result) # Print server response
 
